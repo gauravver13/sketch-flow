@@ -1,3 +1,6 @@
+
+
+
 # Turborepo starter
 
 This Turborepo starter is maintained by the Turborepo core team.
@@ -82,3 +85,31 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+
+
+
+## DID
+0. init mono-repo.(turbo-repo).
+1. deleted docs app, added http and ws backend and init tsc
+2. added package.json in both backend &
+added ts-config.json in both th eplaces and imported it from @repo/typescript-config/base.json as dependency in ws and http backend
+3. TODO: Change the @repo/ts-config to @{project-name}/ts-config
+
+TODO:
+4. added a build, dev and start script to both the projects. done
+5. Update the turbo-config in both the projects.(figure out!!) TODO:(Optional)
+<!-- because using mono-repo thats why above steps:  -->
+6. Initialize a http server, Initialize a web socket server. done. 
+
+TODO: Untill this point, add a react native application also and make this a cli and deploy this into npm package house.
+
+<!-- It should take not more than 20 mins: -->
+7. Write the signup, signin, create-room endpoint.
+8. Write the middlewares that decode the token and gate the create-room eP.
+9. Decode the token in the webSocket server as well, Send the token to the webSocket server in a query param for now
+
+<!-- This should take 20 mins only -->
+10. Initialize a new `db` package where you write the schema of the project,
+11. Import the db package in http layer and start putting things in the DB.
+
+
