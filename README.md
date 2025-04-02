@@ -88,11 +88,17 @@ Learn more about the power of Turborepo:
 
 
 
-## DID
+
+
+
+
+
+
+## DO'S::
 0. init mono-repo.(turbo-repo).
 1. deleted docs app, added http and ws backend and init tsc
 2. added package.json in both backend &
-added ts-config.json in both th eplaces and imported it from @repo/typescript-config/base.json as dependency in ws and http backend
+added ts-config.json in both the places and import it from @repo/typescript-config/base.json as dependency in ws and http backend
 3. TODO: Change the @repo/ts-config to @{project-name}/ts-config
 
 TODO:
@@ -104,11 +110,11 @@ TODO:
 TODO: Untill this point, add a react native application also and make this a cli and deploy this into npm package house.
 
 <!-- It should take not more than 20 mins: -->
-7. Write the signup, signin, create-room endpoint.
+7. Write the signup, signin, create-room endpoint. done
 8. Write the middlewares that decode the token and gate the create-room eP.
 9. Decode the token in the webSocket server as well, Send the token to the webSocket server in a query param for now
 
 <!-- This should take 20 mins only -->
 10. Initialize a new `db` package where you write the schema of the project,
 11. Import the db package in http layer and start putting things in the DB.
-12. Add a Common Package where we add the Zod Schema and the JWT_SECRET!
+12. Add a Common Package where we add the Zod Schema and the JWT_SECRET! done
