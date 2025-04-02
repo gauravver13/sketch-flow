@@ -111,5 +111,4 @@ TODO: Untill this point, add a react native application also and make this a cli
 <!-- This should take 20 mins only -->
 10. Initialize a new `db` package where you write the schema of the project,
 11. Import the db package in http layer and start putting things in the DB.
-
-
+12. Add a Common Package where we add the Zod Schema and the JWT_SECRET!
