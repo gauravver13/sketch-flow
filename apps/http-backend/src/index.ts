@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express";
+import express, { Request, RequestHandler, Response } from "express";
 // import type { Request, Response } from "express";
 import jwt, { JwtPayload } from "jsonwebtoken";
 import { JWT_SECRET } from "@repo/backend-common/config";
@@ -6,6 +6,7 @@ import { CreateUserSchema, SigninSchema, CreateRoomSchema } from "@repo/common/t
 import { prismaClient } from "@repo/db/client";
 import cors from "cors"
 import bcrypt from "bcryptjs"
+import middleware from "./middleware";
 
 const app = express();
 app.use(express.json());
@@ -119,8 +120,41 @@ app.post("/signin", async (req: Request, res: any) => {
 
 })
 
-app.post("/room", async (req, res) => {
-    const data = CreateRoomSchema.safeParse(req.body);
+app.post("/room",middleware, async (req: Request, res: any) => {
+    const parsedData = CreateRoomSchema.safeParse(req.body);
+
+    if(!parsedData.success) {
+        return res.status(401).json({
+            message: "Bad Authentication, Please try Again after sign in"
+        })
+    }
+
+    const userId = req.userId;
+
+    if(!userId) {
+        return res.status(401).json({
+            message: "Bad Authentication again"
+        })
+    }
+
+    try {
+        const room = await prismaClient.room.create({
+            data: {
+                slug: parsedData.data.name,
+                adminId: userId
+            }
+        })
+
+        return res.status(201).json({
+            roomId: room.id,
+            message: "User Created room successfully"
+        })
+    } catch (error) {
+        res.status(411).json({
+            message: "Room already exists with this name",
+            error
+        })
+    }
 })
 
 
