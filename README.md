@@ -119,5 +119,9 @@ TODO: Untill this point, add a react native application also and make this a cli
 11. Import the db package in http layer and start putting things in the DB.
 12. Add a Common Package where we add the Zod Schema and the JWT_SECRET! done
 
-13. Defining the schema in schema.prisma: 8 mins
+13. Defining the schema in schema.prisma: 8 mins. done!
 14. Complete the http backend. 20 mins
+
+15. ws-layer, room-management, broadcast messages! 20-30 mins
+16. HTTP route for GET /chats?room=123! 10 mins
+17. Frontend. 30mins
