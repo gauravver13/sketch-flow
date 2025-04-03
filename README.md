@@ -120,3 +120,4 @@ TODO: Untill this point, add a react native application also and make this a cli
 12. Add a Common Package where we add the Zod Schema and the JWT_SECRET! done
 
 13. Defining the schema in schema.prisma: 8 mins
+14. Complete the http backend. 20 mins
