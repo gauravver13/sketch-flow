@@ -115,12 +115,14 @@ TODO: Untill this point, add a react native application also and make this a cli
 9. Decode the token in the webSocket server as well, Send the token to the webSocket server in a query param for now
 
 <!-- This should take 20 mins only -->
-10. Initialize a new `db` package where you write the schema of the project,
-11. Import the db package in http layer and start putting things in the DB.
-12. Add a Common Package where we add the Zod Schema and the JWT_SECRET! done
+10. Initialize a new `db` package where you write the schema of the project. 10 min
+11. Import the db package in http layer and start putting things in the DB. 10 min done
+12. Add a Common Package where we add the Zod Schema and the JWT_SECRET! 10min done
 
+<!-- this shoudl take 30 min max for thinking purpose of schema-design -->
 13. Defining the schema in schema.prisma: 8 mins. done!
-14. Complete the http backend. 20 mins
+14. Complete the http backend. 15 mins
+
 
 15. ws-layer, room-management, broadcast messages! 20-30 mins
 16. HTTP route for GET /chats?room=123! 10 mins
