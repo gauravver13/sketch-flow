@@ -1,4 +1,4 @@
-import express, { Request, RequestHandler, Response } from "express";
+import express, { Request } from "express";
 // import type { Request, Response } from "express";
 import jwt, { JwtPayload } from "jsonwebtoken";
 import { JWT_SECRET } from "@repo/backend-common/config";
